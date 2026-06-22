@@ -11,25 +11,31 @@ export default function Header() {
             <Logo />
           </div>
 
-          {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
-            <li>
-              <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-800 shadow-sm hover:bg-gray-50"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/signup"
-                className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
-              >
-                Register
-              </Link>
-            </li>
-          </ul>
+          {/* Navigation links */}
+          <nav className="hidden flex-1 items-center justify-center gap-8 md:flex">
+            <Link href="#services" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
+              Services
+            </Link>
+            <Link href="#portfolio" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
+              Portfolio
+            </Link>
+            <Link href="#about" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
+              About
+            </Link>
+            <Link href="#contact" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
+              Contact Me
+            </Link>
+          </nav>
+
+          {/* Download CV button */}
+          <div className="flex flex-1 items-center justify-end">
+            <a
+              href="https://drive.google.com/uc?id=YOUR_CV_ID&export=download"
+              className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
     </header>

@@ -1,10 +1,25 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
+import CircularGallery from "./CircularGallery";
 
 export default function Cta() {
+  const certificates = [
+    { image: "/images/certificate-1.png", text: "Software Engineering Certification" },
+    { image: "/images/certificate-2.png", text: "Cybersecurity Professional" },
+    { image: "/images/certificate-1.png", text: "Advanced React Core" },
+    { image: "/images/certificate-2.png", text: "Web Application Pentesting" },
+    { image: "/images/certificate-1.png", text: "Django Backend Specialist" },
+    { image: "/images/certificate-2.png", text: "Solidity Auditing Specialist" },
+    { image: "/images/certificate-1.png", text: "Cloud Architecture Foundations" },
+    { image: "/images/certificate-2.png", text: "Threat Modeling Practitioner" }
+  ];
+
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="achievements">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Certifications & Achievements</h2>
+        </div>
         <div
           className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
           data-aos="zoom-y-out"
@@ -22,30 +37,23 @@ export default function Cta() {
             aria-hidden="true"
           >
             <Image
-              className="max-w-none"
+              className="max-w-none opacity-50"
               src={Stripes}
               width={768}
               height={432}
               alt="Stripes"
             />
           </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Create your next project with Simple
-            </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
-                className="btn group mb-4 w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
-              >
-                <span className="relative inline-flex items-center">
-                  Start Free Trial{" "}
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
-              </a>
-            </div>
+          {/* Circular Gallery inside the blue box */}
+          <div className="relative h-[480px] w-full py-4 overflow-hidden">
+            <CircularGallery
+              items={certificates}
+              bend={-1.5}
+              textColor="#38bdf8"
+              borderRadius={0.06}
+              scrollEase={0.06}
+              scrollSpeed={2}
+            />
           </div>
         </div>
       </div>
