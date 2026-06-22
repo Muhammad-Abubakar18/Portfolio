@@ -6,7 +6,7 @@ import { FiLinkedin, FiGithub, FiMail, FiArrowUpRight } from "react-icons/fi";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
-    <footer>
+    <footer id="contact" className="scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div

@@ -11,7 +11,7 @@ import Logo09 from "@/public/images/logo-09.svg";
 
 export default function BusinessCategories() {
   return (
-    <section>
+    <section id="skills" className="scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           {/* Tab panels */}

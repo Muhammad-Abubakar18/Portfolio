@@ -54,7 +54,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-[#090d16] relative overflow-hidden">
+    <section id="projects" className="py-20 bg-[#090d16] relative overflow-hidden scroll-mt-28">
       {/* Background glow ornaments */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />

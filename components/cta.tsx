@@ -15,7 +15,7 @@ export default function Cta() {
   ];
 
   return (
-    <section id="achievements">
+    <section id="certificates" className="scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Certifications & Achievements</h2>

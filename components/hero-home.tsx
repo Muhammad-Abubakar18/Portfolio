@@ -26,7 +26,7 @@ export default function HeroHome() {
   ];
 
   return (
-    <section className="relative overflow-hidden">
+    <section id="home" className="relative overflow-hidden">
       <PageIllustration />
       
       {/* Lanyard hanging from top right behind the nav bar */}
@@ -154,7 +154,9 @@ export default function HeroHome() {
               />
             </div>
           </div>
-          <Terminal />
+          <div id="about" className="scroll-mt-28">
+            <Terminal />
+          </div>
         </div>
       </div>
     </section>

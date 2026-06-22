@@ -1,7 +1,17 @@
 import Link from "next/link";
 import Logo from "./logo";
+import GooeyNav from "../GooeyNav";
 
 export default function Header() {
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Certificates", href: "#certificates" },
+    { label: "Contact", href: "#contact" }
+  ];
+
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -12,19 +22,17 @@ export default function Header() {
           </div>
 
           {/* Navigation links */}
-          <nav className="hidden flex-1 items-center justify-center gap-8 md:flex">
-            <Link href="#services" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
-              Services
-            </Link>
-            <Link href="#portfolio" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
-              Portfolio
-            </Link>
-            <Link href="#about" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
-              About
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 transition hover:text-gray-900">
-              Contact Me
-            </Link>
+          <nav className="hidden flex-1 items-center justify-center md:flex">
+            <GooeyNav
+              items={navItems}
+              particleCount={18}
+              particleDistances={[90, 10]}
+              particleR={300}
+              initialActiveIndex={0}
+              animationTime={600}
+              timeVariance={1100}
+              colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+            />
           </nav>
 
           {/* Download CV button */}
@@ -41,3 +49,4 @@ export default function Header() {
     </header>
   );
 }
+
