@@ -4,15 +4,14 @@ import CircularGallery from "./CircularGallery";
 
 export default function Cta() {
   const certificates = [
-    { image: "/images/certificate-1.png", text: "Software Engineering Certification" },
-    { image: "/images/certificate-2.png", text: "Cybersecurity Professional" },
-    { image: "/images/certificate-1.png", text: "Advanced React Core" },
-    { image: "/images/certificate-2.png", text: "Web Application Pentesting" },
-    { image: "/images/certificate-1.png", text: "Django Backend Specialist" },
-    { image: "/images/certificate-2.png", text: "Solidity Auditing Specialist" },
-    { image: "/images/certificate-1.png", text: "Cloud Architecture Foundations" },
-    { image: "/images/certificate-2.png", text: "Threat Modeling Practitioner" }
+    { image: "/images/Data Science with Python.png", text: "Data Science with Python" },
+    { image: "/images/Digital Marketing.png", text: "Digital Marketing" },
+    { image: "/images/Fundamentals of DataScience.PNG", text: "Fundamentals of Data Science" },
+    { image: "/images/JavaScript.png", text: "JavaScript" },
+    { image: "/images/Python.png", text: "Python" },
+    { image: "/images/data science.png", text: "Data Science" }
   ];
+
 
   return (
     <section id="certificates" className="scroll-mt-28">

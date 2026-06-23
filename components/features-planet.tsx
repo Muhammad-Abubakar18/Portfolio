@@ -4,7 +4,7 @@ import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
 
 export default function FeaturesPlanet() {
   return (
-    <section id="experience" className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900 overflow-hidden">
+    <section id="experience" className="scroll-mt-28 relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900 overflow-hidden">
       {/* Background Planet (Globe) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none select-none opacity-80" data-aos="zoom-y-out">
         <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-blue-500),transparent)]">

@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import GooeyNav from "../GooeyNav";
@@ -8,9 +11,48 @@ export default function Header() {
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Experiences", href: "#experience" },
     { label: "Certificates", href: "#certificates" },
     { label: "Contact", href: "#contact" }
   ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const sectionIds = ["home", "about", "skills", "projects", "experience", "certificates", "contact"];
+    
+    const handleScroll = () => {
+      const elements = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+      const scrollPosition = window.scrollY + 180;
+
+      let currentActiveIndex = 0;
+      for (let i = elements.length - 1; i >= 0; i--) {
+        const el = elements[i];
+        if (el && scrollPosition >= el.offsetTop) {
+          currentActiveIndex = i;
+          break;
+        }
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
+        currentActiveIndex = sectionIds.length - 1;
+      }
+
+      setActiveIndex(prev => {
+        if (prev !== currentActiveIndex) {
+          return currentActiveIndex;
+        }
+        return prev;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
@@ -25,6 +67,8 @@ export default function Header() {
           <nav className="hidden flex-1 items-center justify-center md:flex">
             <GooeyNav
               items={navItems}
+              activeIndex={activeIndex}
+              onActiveIndexChange={setActiveIndex}
               particleCount={18}
               particleDistances={[90, 10]}
               particleR={300}

@@ -305,10 +305,14 @@ class Media {
           );
           vec4 color = texture2D(tMap, uv);
           
-          float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
+          // Correct SDF for aspect ratio to keep border radius uniform
+          vec2 p = (vUv - 0.5) * uPlaneSizes;
+          float r = uBorderRadius * min(uPlaneSizes.x, uPlaneSizes.y);
+          vec2 b = uPlaneSizes * 0.5 - vec2(r);
+          float d = roundedBoxSDF(p, b, r);
           
-          // Smooth antialiasing for edges
-          float edgeSmooth = 0.002;
+          // Smooth antialiasing for edges in WebGL space
+          float edgeSmooth = 0.01;
           float alpha = 1.0 - smoothstep(-edgeSmooth, edgeSmooth, d);
           
           gl_FragColor = vec4(color.rgb, alpha);
@@ -399,8 +403,8 @@ class Media {
       }
     }
     this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    this.plane.scale.y = (this.viewport.height * (600 * this.scale)) / this.screen.height;
+    this.plane.scale.x = (this.viewport.width * (850 * this.scale)) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
     this.padding = 2;
     this.width = this.plane.scale.x + this.padding;
