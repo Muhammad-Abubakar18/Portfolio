@@ -42,21 +42,28 @@ export default function FeaturesPlanet() {
             {/* Internship 1 */}
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="flex-1 text-left order-2 md:order-1" data-aos="fade-right">
-                <span className="text-sm font-semibold uppercase tracking-wider text-blue-500 font-mono">June 2025 – August 2025</span>
-                <h3 className="text-2xl font-bold text-gray-200 mt-2">Software Engineering Intern</h3>
-                <h4 className="text-lg text-gray-400 font-medium">Tech Solutions Corp</h4>
+                <span className="text-sm font-semibold uppercase tracking-wider text-blue-500 font-mono">June 2024 – August 2024</span>
+                <h3 className="text-2xl font-bold text-gray-200 mt-2">Cybersecurity & Software Engineering Intern</h3>
+                <h4 className="text-lg text-gray-400 font-medium">National Cyber Crime & Forensics Lab (NCFL), Air University</h4>
                 <p className="text-gray-400 mt-4 leading-relaxed">
-                  Contributed to full-stack web applications using React, Python, and Django. Built secure, optimized REST APIs and automated testing workflows. Collaborated with agile development teams to ship weekly updates.
+                  Contributed to the development of Social Media Forensics solutions by collecting and annotating datasets from multiple sources. Developed secure backend APIs using Python and Django, implemented authentication and user management systems, and collaborated with researchers to build data-driven forensic applications.
                 </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["Python", "Django", "REST APIs", "Authentication", "Data Annotation", "Social Media Forensics"].map((tech) => (
+                    <span key={tech} className="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="flex-1 w-full order-1 md:order-2" data-aos="fade-left">
                 <div className="relative group overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <Image
-                    src="/images/certificate-1.png"
-                    width={500}
-                    height={350}
-                    alt="Software Engineering Certificate"
-                    className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+                     src="/images/certificate-1.png"
+                     width={500}
+                     height={350}
+                     alt="Cybersecurity & Software Engineering Intern Certificate"
+                     className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
               </div>
@@ -70,18 +77,25 @@ export default function FeaturesPlanet() {
                     src="/images/certificate-2.png"
                     width={500}
                     height={350}
-                    alt="Cybersecurity Certificate"
+                    alt="AI & Digital Forensics Intern Certificate"
                     className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
               </div>
               <div className="flex-1 text-left order-2" data-aos="fade-left">
-                <span className="text-sm font-semibold uppercase tracking-wider text-blue-500 font-mono">January 2026 – April 2026</span>
-                <h3 className="text-2xl font-bold text-gray-200 mt-2">Cybersecurity Intern</h3>
-                <h4 className="text-lg text-gray-400 font-medium">SecureNet Labs</h4>
+                <span className="text-sm font-semibold uppercase tracking-wider text-blue-500 font-mono">July 2025 – September 2025</span>
+                <h3 className="text-2xl font-bold text-gray-200 mt-2">AI & Digital Forensics Intern</h3>
+                <h4 className="text-lg text-gray-400 font-medium">National Cyber Crime & Forensics Lab (NCFL), Air University</h4>
                 <p className="text-gray-400 mt-4 leading-relaxed">
-                  Performed vulnerability assessments, analyzed security logs, and implemented secure OAuth2 authentication flows. Identified threat vectors in web services and formulated secure mitigation strategies.
+                  Developed backend services and ML inference APIs for an Image Sentiment and Contextual Analysis Tool using FastAPI. Worked on digital image forensic techniques including metadata extraction, tampering detection, Error Level Analysis (ELA), PRNU, CFA artifact analysis, GAN image detection, and face morphing detection. Collaborated on dashboard enhancement and module integration for AI-powered forensic analysis.
                 </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["Python", "FastAPI", "Machine Learning", "Computer Vision", "Digital Image Forensics", "AI", "Dashboard Development"].map((tech) => (
+                    <span key={tech} className="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
