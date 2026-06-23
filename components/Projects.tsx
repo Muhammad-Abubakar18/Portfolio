@@ -3,6 +3,7 @@
 import React from 'react';
 import BorderGlow from './BorderGlow';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import Particles from './Particles';
 import './Projects.css';
 
 interface Project {
@@ -55,6 +56,17 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 bg-[#090d16] relative overflow-hidden scroll-mt-28">
+      <div className="absolute inset-0 pointer-events-none opacity-45 z-0">
+        <Particles
+          particleColors={["#6366f1", "#a855f7", "#3b82f6"]}
+          particleCount={150}
+          particleSpread={7}
+          speed={0.15}
+          particleBaseSize={70}
+          moveParticlesOnHover={true}
+          alphaParticles={true}
+        />
+      </div>
       {/* Background glow ornaments */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />

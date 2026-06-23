@@ -22,9 +22,12 @@ export default function Terminal() {
     { type: 'output', text: 'Location: Islamabad, Pakistan' },
     { type: 'output', text: 'Status: Available for opportunities' },
     { type: 'input', text: 'cat skills.txt', delayBefore: 1500, delayAfter: 500 },
-    { type: 'output', text: 'Frontend: React, Next.js, TypeScript, TailwindCSS' },
-    { type: 'output', text: 'Backend: Python, Django, Node.js, PostgreSQL' },
-    { type: 'output', text: 'Security: Pentesting, Web Application Security' },
+    { type: 'output', text: 'Languages:        Python • Java • JavaScript • PHP' },
+    { type: 'output', text: 'Backend:          Django • DRF • FastAPI • Spring Boot • REST APIs' },
+    { type: 'output', text: 'Frontend:         React.js • Tailwind CSS • HTML5 • CSS3' },
+    { type: 'output', text: 'Databases:        PostgreSQL • MySQL • Firebase • Redis' },
+    { type: 'output', text: 'DevOps & Tools:   Docker • Git • CI/CD • Celery • Selenium • BeautifulSoup' },
+    { type: 'output', text: 'AI & Security:    Machine Learning • Gemini API • Vulnerability Detection • JWT' },
     { type: 'clear', delayBefore: 3000 }
   ];
 
