@@ -665,6 +665,8 @@ export default function CircularGallery({
   scrollEase = 0.05
 }: CircularGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const appRef = useRef<any>(null);
+
   useEffect(() => {
     if (!containerRef.current) return;
     let app: App;
@@ -680,6 +682,7 @@ export default function CircularGallery({
         scrollSpeed,
         scrollEase
       });
+      appRef.current = app;
     });
 
     return () => {
@@ -687,13 +690,52 @@ export default function CircularGallery({
       if (app) app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, fontUrl, scrollSpeed, scrollEase]);
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (appRef.current) {
+      appRef.current.scroll.target -= appRef.current.scrollSpeed * 5;
+      appRef.current.onCheckDebounce();
+    }
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (appRef.current) {
+      appRef.current.scroll.target += appRef.current.scrollSpeed * 5;
+      appRef.current.onCheckDebounce();
+    }
+  };
+
   return (
-    <div
-      className="circular-gallery"
-      ref={containerRef}
-      tabIndex={0}
-      role="region"
-      aria-label="Circular image gallery. Use left and right arrow keys to navigate."
-    />
+    <div className="relative w-full h-full group/gallery">
+      <div
+        className="circular-gallery"
+        ref={containerRef}
+        tabIndex={0}
+        role="region"
+        aria-label="Circular image gallery. Use left and right arrow keys or the on-screen buttons to navigate."
+      />
+      
+      {/* On-screen Navigation Controls */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/60 border border-slate-700/50 text-white backdrop-blur-xs hover:bg-slate-800/80 transition shadow-lg cursor-pointer md:opacity-0 md:group-hover/gallery:opacity-100"
+        aria-label="Previous slide"
+      >
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/60 border border-slate-700/50 text-white backdrop-blur-xs hover:bg-slate-800/80 transition shadow-lg cursor-pointer md:opacity-0 md:group-hover/gallery:opacity-100"
+        aria-label="Next slide"
+      >
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
   );
 }

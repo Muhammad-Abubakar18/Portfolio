@@ -114,11 +114,11 @@ export default function Terminal() {
       </div>
 
       {/* Terminal window content */}
-      <div className="p-6 min-h-[260px] text-left leading-relaxed">
+      <div className="p-6 min-h-[260px] text-left leading-relaxed overflow-x-auto">
         {lines.map((line, idx) => {
           const isCommand = line.startsWith('$');
           return (
-            <div key={idx} className={isCommand ? 'text-blue-400 font-semibold' : 'text-emerald-400/90'}>
+            <div key={idx} className={`${isCommand ? 'text-blue-400 font-semibold' : 'text-emerald-400/90'} whitespace-pre-wrap break-words`}>
               {line}
             </div>
           );

@@ -161,7 +161,7 @@ export default function BusinessCategories() {
               </div>
             </div>
 
-            <div className="relative flex flex-col">
+            <div className="relative flex flex-col scale-55 sm:scale-75 md:scale-90 lg:scale-100 transition-transform duration-300">
               <article className="flex h-full w-full items-center justify-center">
                 {/* React.js - Left Inner */}
                 <div className="absolute -translate-x-[136px]">

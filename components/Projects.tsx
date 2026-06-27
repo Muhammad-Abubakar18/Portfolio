@@ -102,7 +102,7 @@ export default function Projects() {
                     <div className="absolute inset-0 bg-black/45 z-10" />
                     <div className="relative z-20 flex flex-col justify-between h-full p-6 text-left">
                       <div className="flex justify-between items-start">
-                        <span className="px-3 py-1 text-xs font-semibold tracking-wider text-indigo-300 uppercase bg-indigo-950/50 rounded-full border border-indigo-800/30">
+                        <span className="px-3 py-1 text-xs font-semibold tracking-wider text-indigo-300 uppercase bg-indigo-950/50 rounded-full border border-indigo-800/30 whitespace-nowrap">
                           Project {project.id}
                         </span>
                       </div>
@@ -110,12 +110,12 @@ export default function Projects() {
                         <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                         <div className="flex flex-wrap gap-1.5 mt-3">
                           {project.tech.slice(0, 3).map((t, i) => (
-                            <span key={i} className="text-[10px] bg-white/10 text-gray-200 px-2 py-0.5 rounded-md font-mono">
+                            <span key={i} className="text-[10px] bg-white/10 text-gray-200 px-2 py-0.5 rounded-md font-mono whitespace-nowrap">
                               {t}
                             </span>
                           ))}
                           {project.tech.length > 3 && (
-                            <span className="text-[10px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-md font-mono">
+                            <span className="text-[10px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-md font-mono whitespace-nowrap">
                               +{project.tech.length - 3} more
                             </span>
                           )}
