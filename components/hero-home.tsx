@@ -31,11 +31,11 @@ export default function HeroHome() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pb-12 pt-28 md:pb-20 md:pt-36">
+        <div className="pb-12 pt-16 md:pb-20 md:pt-24">
           {/* Section header with Lanyard */}
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-8 items-center">
             {/* Lanyard container (Rendered at top on mobile, on the right on desktop) */}
-            <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[600px] pointer-events-none z-0 order-1 lg:order-2 -mt-[100px] -mb-[10px] lg:mt-0 lg:mb-0">
+            <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[700px] pointer-events-none z-10 order-1 lg:order-2 -mt-[150px] -mb-[30px] lg:-mt-[180px] lg:mb-0">
               <div className="w-full h-full pointer-events-auto">
                 <Lanyard
                   position={[0, 0, 20]}
@@ -118,7 +118,9 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-800 shadow-sm hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#portfolio"
+                    href="/Muhammad_Abubakar_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View My Work
                   </a>

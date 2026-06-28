@@ -55,7 +55,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-2 z-30 w-full md:top-6">
+    <header className="fixed top-0 z-30 w-full md:top-2">
       <div className="mx-auto max-w-6xl px-2 sm:px-6 relative">
         <div className="relative flex h-14 items-center justify-between gap-1 sm:gap-3 rounded-2xl bg-white/90 px-2 sm:px-3 shadow-lg shadow-black/[0.03] backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Logo */}
@@ -101,13 +101,16 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Download CV Button */}
+          {/* Download Resume Button */}
           <div className="relative z-10 flex items-center justify-end">
             <a
-              href="https://drive.google.com/uc?id=YOUR_CV_ID&export=download"
+              href="/Muhammad_Abubakar_Resume.pdf"
+              download="Muhammad_Abubakar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gray-800 text-gray-200 hover:bg-gray-900 px-2.5 py-1 text-[9px] sm:text-xs font-bold uppercase rounded-lg transition whitespace-nowrap"
             >
-              CV
+              Resume
             </a>
           </div>
         </div>

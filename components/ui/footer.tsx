@@ -121,12 +121,15 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 </Link>
               </li>
               <li>
-                <Link
+                <a
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="https://drive.google.com/uc?id=YOUR_CV_ID&export=download"
+                  href="/Muhammad_Abubakar_Resume.pdf"
+                  download="Muhammad_Abubakar_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Download CV
-                </Link>
+                  Download Resume
+                </a>
               </li>
               <li>
                 <Link
