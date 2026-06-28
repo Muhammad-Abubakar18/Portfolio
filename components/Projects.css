@@ -1,8 +1,5 @@
 .project-card-container {
   perspective: 1000px;
-  width: 100%;
-  max-width: 380px;
-  height: 380px;
 }
 
 .project-card-inner {
@@ -32,12 +29,17 @@
 .project-card-front {
   background-size: cover;
   background-position: center;
+  transform: rotateY(0deg) translateZ(1px);
+}
+
+.project-card-container:hover .project-card-front {
+  pointer-events: none;
 }
 
 .project-card-back {
   background-color: #0b0f19;
   color: white;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
