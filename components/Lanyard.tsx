@@ -192,9 +192,9 @@ function Band({
   const [dragged, drag] = useState<any>(false);
   const [hovered, hover] = useState(false);
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], isMobile ? 1.4 : 1]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], isMobile ? 1.4 : 1]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], isMobile ? 1.4 : 1]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
     [0, 1.5, 0]
@@ -252,10 +252,10 @@ function Band({
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[1.06, 1.5, 0.01]} />
+          <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={3}
-            position={[0, -1.6, -0.05]}
+            scale={2.25}
+            position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={e => (e.target && (e.target as any).releasePointerCapture(e.pointerId), drag(false))}
