@@ -23,7 +23,8 @@ import {
   SiSpring
 } from "react-icons/si";
 import { FaJava, FaBrain, FaLock, FaServer, FaCode } from "react-icons/fa";
-import Particles from "./Particles";
+import dynamic from "next/dynamic";
+const Particles = dynamic(() => import("./Particles"), { ssr: false });
 
 export default function BusinessCategories() {
   const skillCategories = [

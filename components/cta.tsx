@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
-import CircularGallery from "./CircularGallery";
+import dynamic from "next/dynamic";
+const CircularGallery = dynamic(() => import("./CircularGallery"), { ssr: false });
 
 export default function Cta() {
   const certificates = [

@@ -2,8 +2,9 @@
 
 import PageIllustration from "@/components/page-illustration";
 import LogoLoop from "@/components/logo-loop";
-import Lanyard from "@/components/Lanyard";
 import Terminal from "@/components/Terminal";
+import dynamic from "next/dynamic";
+const Lanyard = dynamic(() => import("@/components/Lanyard"), { ssr: false });
 import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 
 export default function HeroHome() {

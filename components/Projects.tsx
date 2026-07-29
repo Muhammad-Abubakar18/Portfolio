@@ -3,8 +3,9 @@
 import React from 'react';
 import BorderGlow from './BorderGlow';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import Particles from './Particles';
 import './Projects.css';
+import dynamic from "next/dynamic";
+const Particles = dynamic(() => import("./Particles"), { ssr: false });
 
 interface Project {
   id: number;
@@ -29,7 +30,8 @@ export default function Projects() {
       description: 'A comprehensive network and system security monitoring platform designed to detect network security events and intrusions. The application features a modern, clean dashboard providing real-time alerts, scheduled scans, and robust user management integrated with machine learning classification.',
       image: 'linear-gradient(135deg, #0f172a 0%, #312e81 100%)',
       tech: ['Python', 'Django', 'React.js', 'PostgreSQL', 'Celery', 'Redis', 'Machine Learning'],
-      githubUrl: 'https://github.com/Muhammad-Abubakar18/testingIntrusionEye',
+      githubUrl: 'https://github.com/Muhammad-Abubakar18/Intrusion-Eye.git',
+      liveUrl: 'https://intrusioneye.vercel.app/',
       glowColor: '250 80 60',
       borderColors: ['#6366f1', '#3b82f6', '#10b981'],
       level: 'Professional',
