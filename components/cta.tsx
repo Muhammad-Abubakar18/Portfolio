@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
 import dynamic from "next/dynamic";
