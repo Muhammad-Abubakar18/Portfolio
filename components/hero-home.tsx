@@ -6,6 +6,8 @@ import Terminal from "@/components/Terminal";
 import dynamic from "next/dynamic";
 const Lanyard = dynamic(() => import("@/components/Lanyard"), { ssr: false });
 import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
+import Image from "next/image";
+import whatsappIcon from "@/components/assets/whatsapp-icon.png";
 
 export default function HeroHome() {
   // Using text-based tech logos for better compatibility
@@ -78,6 +80,15 @@ export default function HeroHome() {
                   aria-label="Email"
                 >
                   <FiMail size={24} />
+                </a>
+                <a
+                  href="https://wa.me/923328534807"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full p-2 text-gray-600 transition hover:bg-gray-100 hover:opacity-80"
+                  aria-label="WhatsApp"
+                >
+                  <Image src={whatsappIcon} alt="WhatsApp" className="h-[26px] w-[26px] object-contain" />
                 </a>
               </div>
 

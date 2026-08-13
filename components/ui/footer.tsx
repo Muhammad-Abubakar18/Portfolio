@@ -149,7 +149,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           {/* 5th block - Social */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium">Connect</h3>
-            <ul className="flex gap-4">
+            <ul className="flex gap-6 items-center">
               <li>
                 <a
                   className="flex items-center justify-center text-blue-600 transition hover:text-blue-700"
@@ -189,7 +189,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
                 >
-                  <Image src={whatsappIcon} alt="WhatsApp" className="h-5 w-5 object-contain" />
+                  <Image src={whatsappIcon} alt="WhatsApp" className="h-[26px] w-[26px] object-contain" />
                 </a>
               </li>
             </ul>
