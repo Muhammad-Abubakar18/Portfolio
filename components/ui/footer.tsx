@@ -1,6 +1,8 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
+import whatsappIcon from "@/components/assets/whatsapp-icon.png";
 import Logo from "./logo";
 import { FiLinkedin, FiGithub, FiMail, FiArrowUpRight } from "react-icons/fi";
 
@@ -177,6 +179,17 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   aria-label="Email"
                 >
                   <FiMail className="h-5 w-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  className="flex items-center justify-center transition hover:opacity-80"
+                  href="https://wa.me/923328534807"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <Image src={whatsappIcon} alt="WhatsApp" className="h-5 w-5 object-contain" />
                 </a>
               </li>
             </ul>
