@@ -179,7 +179,7 @@ export default function Projects() {
                         <div className="project-card-inner">
                           {/* Front Side */}
                           <div className="project-card-front" style={{ background: project.image }}>
-                            {project.videoUrl && (
+                            {project.videoUrl ? (
                               <video
                                 src={project.videoUrl}
                                 autoPlay
@@ -188,6 +188,12 @@ export default function Projects() {
                                 playsInline
                                 className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 mix-blend-screen"
                               />
+                            ) : (
+                              <div className="absolute inset-0 flex items-center justify-center z-0">
+                                <span className="text-white/50 text-sm font-medium tracking-wider uppercase text-center px-4">
+                                  No image/video provided to showcase
+                                </span>
+                              </div>
                             )}
                             <div className="absolute inset-0 bg-black/45 z-10" />
                             <div className="relative z-20 flex flex-col justify-between h-full p-6 text-center">
